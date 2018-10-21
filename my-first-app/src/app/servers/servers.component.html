@@ -8,12 +8,17 @@
 <p>{{serverCreationStatus}}</p>
 <p>{{serverName}}</p>
 
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 
 <hr>
 <label>User:</label>
 <input type="text" class="form-control" [(ngModel)]="username">
 <button [disabled]="username.trim().length == 0"  class="btn btn-primary" (click)="onUserLogin()">Login</button>
 <p>{{userStatus}}</p>
+
+
+<hr>
+<p *ngIf="serverCreated; else noserver">Server Created: {{serverName}}</p>
+<ng-template #noserver>
+  <p>No server created yet</p>
+</ng-template>

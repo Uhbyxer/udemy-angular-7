@@ -1,4 +1,4 @@
 
-<p> Server {{serverId}} is {{serverStatus}} </p>
+<p [ngClass] = "{online: serverStatus === 'online', offline: serverStatus === 'offline'}"> Server {{serverId}} is {{serverStatus}}</p>
 
 
