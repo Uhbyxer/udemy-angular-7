@@ -7,14 +7,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() featureSelected = new EventEmitter<string>();
-
   constructor() { }
 
   ngOnInit() {
-  }
-
-  onSelect(what: string) {
-    this.featureSelected.emit(what);
   }
 }
