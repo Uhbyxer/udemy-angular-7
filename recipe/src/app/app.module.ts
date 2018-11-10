@@ -33,6 +33,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     AppRoutingModule,
   ],
   providers: [ShoppingListService],
