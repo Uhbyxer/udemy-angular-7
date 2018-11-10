@@ -23,6 +23,17 @@ export class ShoppingListService {
     this.ingredientChanged.next(this.ingredients);
   }
 
+  updateIngredient(index: number, newIngredient: Ingredient) {
+    this._ingredients[index] = newIngredient;
+    this.ingredientChanged.next(this.ingredients);
+  }
+
+  deleteIngredient(index: number) {
+    this._ingredients.splice(index, 1);
+    this.ingredientChanged.next(this.ingredients);
+  }
+
+
   getIngredient(index: number) {
     return this._ingredients[index];
   }
